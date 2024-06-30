@@ -30,8 +30,8 @@
                 <div class="banner-container"></div>
             </article>
         </section>
-        <section id="profile" style="margin-bottom: 100px;">
-            <header>
+        <section id="profile">
+            <header >
                 <h1>Our Profile</h1>
             </header>
             <article>
@@ -46,10 +46,11 @@
                 <div class="profiles">
                     <div class="profile-icon"></div>
                     <p>Profile 1</p>
+
                 </div>
             </article>
         </section>
-        <section id="message">
+        <section id="message" style="padding-bottom: 10px;">
             <header>
                 <h1>Message Us</h1>
             </header>
@@ -58,38 +59,31 @@
                     <form action="/">
                         <div class="row">
                             <div class="col-25">
-                                <label for="fname">First Name</label>
+                                <label for="fname">Nama</label>
                             </div>
                             <div class="col-75">
-                                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                                <input type="text" id="fname" name="firstname" placeholder="Nama Kamu">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-25">
-                                <label for="lname">Last Name</label>
+                                <label for="lname">Tanggal/Lahir</label>
                             </div>
                             <div class="col-75">
-                                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                                <input type="date" id="lname" name="tanggal">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-25">
-                                <label for="country">Country</label>
-                            </div>
-                            <div class="col-75">
-                                <select id="country" name="country">
-                                    <option value="australia">Australia</option>
-                                    <option value="canada">Canada</option>
-                                    <option value="usa">USA</option>
-                                </select>
+                                <label for="subject">Jenis Kelamin</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-25">
-                                <label for="subject">Subject</label>
+                                <label for="subject">Pesan</label>
                             </div>
                             <div class="col-75">
-                                <textarea id="subject" name="subject" placeholder="Write something.."
+                                <textarea id="subject" name="subject" placeholder="Tulis Pesan.."
                                     style="height:200px"></textarea>
                             </div>
                         </div>
@@ -100,7 +94,7 @@
                     </form>
                 </div>
                 <div>
-                    <table>
+                    <!-- <table>
                         <tr>
                             <th>Company</th>
                             <th>Contact</th>
@@ -116,7 +110,7 @@
                             <td>Francisco Chang</td>
                             <td>Mexico</td>
                         </tr>
-                    </table>
+                    </table> -->
                 </div>
             </article>
         </section>
