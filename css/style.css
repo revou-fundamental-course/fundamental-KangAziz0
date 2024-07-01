@@ -24,11 +24,52 @@ body {
 
 }
 
+.active {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    height: 30vh;
+    top: 50px;
+    align-items: center;
+    background-color: #04AA6D;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid;
+}
+
+.active nav {
+    width: 400px;
+    height: 300px;
+    display: flex;
+}
+
+.active nav li {
+    list-style: none;
+    margin-right: 40px;
+    margin-top: 10px;
+    width: 300px;
+    border-radius: 50px;
+    background-color: white;
+    padding: 6px 15px;
+    cursor: pointer;
+}
+
+.active nav li a {
+    text-decoration: none;
+    font-size: 15px;
+    padding-right: 200px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: black;
+}
+
 .logo-icon {
     margin: 10px 0px 10px 5%;
     height: 40px;
     width: 40px;
-   background-image: url('/assets/profil.jpg');
+    background-image: url('/assets/profil.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
@@ -44,18 +85,20 @@ nav>a {
     padding: 10px 32px;
     float: left;
     display: block;
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: #04AA6D;
     text-align: center;
     border: 1px solid;
     border-radius: 50px;
     text-decoration: none;
     transition: .5s ease-in-out;
+    font-weight: 600;
 }
 
-nav a:hover {
-    background-color: black;
-    color: white;
+nav>a:hover {
+    background-color: #45a049;
+    transform: scaleX(1.1);
+
 }
 
 main {
@@ -73,13 +116,16 @@ main {
 section header {
     margin-left: 5%;
 }
-#profile{
+
+#profile {
     display: flex;
     min-height: 500px;
 }
-#profile header{
+
+#profile header {
     margin-top: 50px;
 }
+
 #profile article {
     display: flex;
     justify-content: center;
@@ -94,14 +140,14 @@ section header {
     border-radius: 50%;
 }
 
-.profile {
+.profiles {
     text-align: center;
 }
 
 #message {
     border-top: 1px solid;
     padding-top: 5%;
-    padding-bottom:2%;
+    padding-bottom: 2%;
     border-bottom: 1px solid;
     background-color: #ffffff;
 }
@@ -115,7 +161,8 @@ section header {
 }
 
 
-input[type=text],input[type=date],
+input[type=text],
+input[type=date],
 textarea {
     margin-left: 30%;
     width: 100%;
@@ -137,7 +184,7 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 140%;
+    width: 130%;
 }
 
 input[type=submit]:hover {
@@ -155,17 +202,27 @@ input[type=submit]:hover {
     width: 75%;
     margin-top: 6px;
 }
-#gender{
+
+#gender {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.radio{
+
+.radio {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* flex-wrap: wrap; */
     margin-left: 25%;
 }
+
+.radio .satu {
+    display: flex;
+}
+
+.radio .dua {
+    display: flex
+}
+
 /* Clear floats after the columns */
 .row::after {
     content: "";
@@ -173,8 +230,52 @@ input[type=submit]:hover {
     clear: both;
 }
 
+.hamburger {
+    margin-right: 5%;
+}
+
+.hamburger button {
+    padding: 7px 14px;
+    font-size: 20px;
+    border: none;
+    background-color: #04AA6D;
+    color: white;
+    border-radius: 50px;
+    display: none;
+}
+
+.table {
+    border: 1px solid black;
+    width: 50%;
+    height: 400px;
+}
+
+@media (max-width:576px) {
+    .form .row {
+        /* border: 1px solid; */
+        width: 130%;
+    }
+
+    .form .row .col-25 {
+        width: 40%;
+    }
+
+    .col-75 {
+        /* border: 1px solid; */
+        display: flex;
+        justify-content: end;
+    }
+
+    .col-75 input,
+    textarea {
+        width: 100%;
+    }
+
+}
+
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media(max-width: 700px) {
+
     .col-25,
     .col-75,
     input[type=submit] {
@@ -182,10 +283,118 @@ input[type=submit]:hover {
         margin-right: 0;
         margin-top: 0;
     }
-  .row{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 0;
-  }
+
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .hamburger button {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+
+    #profile article {
+        display: flex;
+        gap: 30px;
+        width: 100px;
+    }
+
+    .profile-icon {
+        height: 80px;
+        width: 80px;
+    }
+
+    #message article {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .table {
+        border: none;
+    }
+
+    .form {
+        display: flex;
+        width: 100%;
+        /* border: 1px solid; */
+    }
+
+    #message .form input,
+    textarea {
+        padding: 5px;
+        margin-right: 30%;
+        margin-left: 0;
+    }
+
+    #message .form input[type=submit] {
+        margin-left: 0;
+        margin-right: 30%;
+    }
+
+
+    .radio {
+        display: flex;
+        flex-wrap: wrap;
+        /* border: 1px solid; */
+        margin-right: 50px;
+    }
+
+    input[type=submit] {
+        width: 66%;
+        margin-left: 65%;
+    }
+}
+
+@media (max-width: 992px) {
+    nav>a {
+        padding: 10px 20px;
+        font-size: 15px;
+
+    }
+
+    #profile article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #message .form {
+        display: flex;
+        width: 100%;
+    }
+
+    #message .form input,
+    textarea {
+        width: 210%;
+    }
+
+    #message .form input[type=submit] {
+        width: 100%;
+    }
+
+    .table {
+        /* border: 1px solid black; */
+        width: 100%;
+        height: 400px;
+    }
+
+    #message article {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        margin-left: 50%;
+    }
 }

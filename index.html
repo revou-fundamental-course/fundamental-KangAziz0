@@ -17,24 +17,46 @@
             <a href="#portofolio">Portofolio</a>
             <a href="#message">Message Us</a>
         </nav>
+        <div class="hamburger">
+            <button>=</button>
+        </div>
     </header>
+
+    <div class="active">
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#profile">Our Profile</a>
+                </li>
+                <li>
+                    <a href="#">Portofolio</a>
+                </li>
+                <li>
+                    <a href="#message">Message Us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <main style="margin-top: 100px;">
         <section id="#">
             <header>
                 <h1>Hi User , Welcome to Website</h1>
                 <p>Ini adalah project pertama saya</p>
             </header>
-            <article style=" display: flex;
+            <article style="display: flex;
             align-items: center;
             justify-content: center;">
                 <div class="banner-container"></div>
             </article>
         </section>
         <section id="profile">
-            <header >
+            <header>
                 <h1>Our Profile</h1>
             </header>
-            <article>
+            <article class="article-profile">
                 <div class="profiles">
                     <div class="profile-icon"></div>
                     <p>Profile 1</p>
@@ -55,8 +77,8 @@
                 <h1>Message Us</h1>
             </header>
             <article>
-                <div class="">
-                    <form action="/">
+                <div class="form">
+                    <form action="#">
                         <div class="row">
                             <div class="col-25">
                                 <label for="fname">Nama</label>
@@ -73,15 +95,19 @@
                                 <input type="date" id="lname" name="tanggal">
                             </div>
                         </div>
-                        <div class="row" id="gender">
+                        <div id="gender">
                             <div class="col-25">
                                 <label for="subject">Jenis Kelamin</label>
                             </div>
                             <div class="radio">
-                                <input type="radio" id="html" name="fav_language" value="HTML">
-                                <label for="html">Perempuan</label><br>
-                                <input type="radio" id="css" name="fav_language" value="CSS">
-                                <label for="css">Laki_laki</label><br>
+                                <div class="satu">
+                                    <input type="radio" id="html" name="fav_language" value="HTML">
+                                    <label for="html">Perempuan</label><br>
+                                </div>
+                                <div class="dua">
+                                    <input type="radio" id="css" name="fav_language" value="CSS">
+                                    <label for="css">Laki_laki</label><br>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
@@ -94,33 +120,48 @@
                             </div>
                         </div>
                         <br>
-                        <div class="row">
+                        <div class="">
                             <input type="submit" value="Submit">
                         </div>
                     </form>
                 </div>
-                <div>
-                    <!-- <table>
+                <div class="table">
+                    <table style="padding: 10px;background-color: #04AA6D;color: white;">
+                        <tr style="font-weight: bold;">
+                            <td>Current Time:</td>
+                            <td>100/100/100</td>
+                        </tr>
+                    </table>
+                    <table style="margin-top: 20px;padding: 10px;">
                         <tr>
-                            <th>Company</th>
-                            <th>Contact</th>
-                            <th>Country</th>
+                            <td style="width: 20%;">Nama</td>
+                            <td>:</td>
+                            <td>Muhamad Aziz</td>
                         </tr>
                         <tr>
-                            <td>Alfreds Futterkiste</td>
-                            <td>Maria Anders</td>
-                            <td>Germany</td>
+                            <td>Tanggal Lahir</td>
+                            <td>:</td>
+                            <td>12/12/12</td>
                         </tr>
                         <tr>
-                            <td>Centro comercial Moctezuma</td>
-                            <td>Francisco Chang</td>
-                            <td>Mexico</td>
+                            <td>Jenis Kelamin</td>
+                            <td>:</td>
+                            <td>Laki -laki</td>
                         </tr>
-                    </table> -->
+                        <tr>
+                            <td>Pesan</td>
+                            <td>:</td>
+                            <td style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Rem temporibus aperiam enim,
+                                in sequi consequuntur blanditiis quod nam eum eligendi rerum corporis mollitia repellat
+                                asperiores officia hic natus dignissimos fugiat?</td>
+                        </tr>
+                    </table>
                 </div>
             </article>
         </section>
     </main>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
