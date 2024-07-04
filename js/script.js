@@ -11,7 +11,7 @@ function greetUser() {
 
    // Tampilkan pesan selamat datang
    const welcomeMessage = document.getElementById('username');
-   welcomeMessage.innerHTML = `<h1>${userName}`;
+   welcomeMessage.innerHTML = `${userName}`;
 }
 
 // Panggil fungsi greetUser ketika halaman dimuat
