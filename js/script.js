@@ -1,3 +1,23 @@
+// script.js
+
+// Fungsi untuk menampilkan prompt dan menyambut pengguna
+function greetUser() {
+   let userName = '';
+
+   // Terus menampilkan prompt hingga pengguna memasukkan nama yang tidak kosong
+   while (!userName) {
+       userName = prompt('Please enter your name:');
+   }
+
+   // Tampilkan pesan selamat datang
+   const welcomeMessage = document.getElementById('username');
+   welcomeMessage.innerHTML = `<h1>${userName}`;
+}
+
+// Panggil fungsi greetUser ketika halaman dimuat
+window.onload = greetUser;
+
+
 const tombol = document.querySelector('.hamburger')
 const nav = document.querySelector('.active')
 tombol.addEventListener('click', () => {
@@ -54,7 +74,7 @@ function submitForm() {
    </tr>`
 
       document.getElementById('myForm').reset()
-   }else{
+   } else {
       if (name === '' || tanggal === '' || pesan === '' || !selectedOption) {
          alert('Please fill in all fields')
          return
