@@ -15,9 +15,9 @@ body {
     overflow: hidden;
     color: white;
     background-color: white;
-    position: fixed;
+    /* position: fixed; */
     /* Set the navbar to fixed position */
-    top: 0;
+    /* top: 0; */
     /* Position the navbar at the top of the page */
     width: 100%;
     /* Full width */
@@ -25,7 +25,7 @@ body {
 }
 
 .active {
-    position: fixed;
+    position: relative;
     display: none;
     justify-content: center;
     height: 30vh;
@@ -101,17 +101,46 @@ nav>a:hover {
 
 }
 
-main {
-    margin-top: 100px;
-}
-
-.banner-container {
+/* .banner-container {
     height: 500px;
     width: 100%;
     margin-left: 5%;
+    background-image: url('/assets/image_241.jpg');
+    background-size: contain;
+    background-repeat: repeat;
     margin-right: 5%;
     border: 1px solid;
+} */
+
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    margin-right: 5%;
+    margin-left: 5%;
 }
+
+.carousel {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    height: 500px;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-images img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
 
 section header {
     margin-left: 5%;
@@ -177,7 +206,7 @@ label {
     display: inline-block;
 }
 
-input[type=submit] {
+button {
     background-color: #04AA6D;
     color: white;
     padding: 12px 20px;
@@ -186,8 +215,7 @@ input[type=submit] {
     cursor: pointer;
     width: 130%;
 }
-
-input[type=submit]:hover {
+button:hover {
     background-color: #45a049;
 }
 
@@ -278,7 +306,7 @@ input[type=submit]:hover {
 
     .col-25,
     .col-75,
-    input[type=submit] {
+    button{
         width: 100%;
         margin-right: 0;
         margin-top: 0;
@@ -334,7 +362,7 @@ input[type=submit]:hover {
         margin-left: 0;
     }
 
-    #message .form input[type=submit] {
+    #message .form button {
         margin-left: 0;
         margin-right: 30%;
     }
@@ -347,7 +375,7 @@ input[type=submit]:hover {
         margin-right: 50px;
     }
 
-    input[type=submit] {
+    button {
         width: 66%;
         margin-left: 65%;
     }
@@ -377,7 +405,7 @@ input[type=submit]:hover {
         width: 210%;
     }
 
-    #message .form input[type=submit] {
+    #message .form button {
         width: 100%;
     }
 
@@ -393,7 +421,7 @@ input[type=submit]:hover {
         gap: 50px;
     }
 
-    input[type=submit] {
+    button {
         width: 100%;
         margin-left: 50%;
     }

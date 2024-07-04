@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+   
 </head>
 
 <body>
@@ -40,16 +41,27 @@
             </ul>
         </nav>
     </div>
-    <main style="margin-top: 100px;">
+    <main>
         <section id="#">
             <header>
-                <h1>Hi User , Welcome to Website</h1>
-                <p>Ini adalah project pertama saya</p>
+                <h1>Hi <span id="username" style="color: #04AA6D;"></span> , Welcome to Website</h1>
+                <p>Ini Adalah Project - Project Yang Sudah Saya Buat</p>
             </header>
             <article style="display: flex;
             align-items: center;
             justify-content: center;">
-                <div class="banner-container"></div>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-images">
+                            <img src="/assets/grosir-1.PNG" alt="Image 1">
+                            <img src="/assets/Screenshot.png" alt="Image 3">
+                            <img src="/assets/login-galeri.PNG" alt="Image 4">
+                            <img src="/assets/profil.PNG" alt="Image 2">
+                            <img src="/assets/page1.PNG" alt="Image 2">
+                        </div>
+                    </div>
+                </div>
+
             </article>
         </section>
         <section id="profile">
@@ -78,13 +90,13 @@
             </header>
             <article>
                 <div class="form">
-                    <form action="#">
+                    <form action="#" id="myForm">
                         <div class="row">
                             <div class="col-25">
                                 <label for="fname">Nama</label>
                             </div>
                             <div class="col-75">
-                                <input type="text" id="fname" name="firstname" placeholder="Nama Kamu">
+                                <input type="text" id="nama" name="firstname" placeholder="Nama Kamu">
                             </div>
                         </div>
                         <div class="row">
@@ -92,7 +104,7 @@
                                 <label for="lname">Tanggal/Lahir</label>
                             </div>
                             <div class="col-75">
-                                <input type="date" id="lname" name="tanggal">
+                                <input type="date" id="tgl" name="tanggal">
                             </div>
                         </div>
                         <div id="gender">
@@ -101,12 +113,12 @@
                             </div>
                             <div class="radio">
                                 <div class="satu">
-                                    <input type="radio" id="html" name="fav_language" value="HTML">
+                                    <input type="radio" class="gender" name="option" value="Perempuan">
                                     <label for="html">Perempuan</label><br>
                                 </div>
                                 <div class="dua">
-                                    <input type="radio" id="css" name="fav_language" value="CSS">
-                                    <label for="css">Laki_laki</label><br>
+                                    <input type="radio" class="gender" name="option" value="Laki-laki">
+                                    <label for="Perempuan">Laki_laki</label><br>
                                 </div>
                             </div>
                         </div>
@@ -115,13 +127,13 @@
                                 <label for="subject">Pesan</label>
                             </div>
                             <div class="col-75">
-                                <textarea id="subject" name="subject" placeholder="Tulis Pesan.."
+                                <textarea id="pesan" name="subject" placeholder="Tulis Pesan.."
                                     style="height:200px"></textarea>
                             </div>
                         </div>
                         <br>
                         <div class="">
-                            <input type="submit" value="Submit">
+                            <button type="button" onclick="submitForm()">Masukan</button>
                         </div>
                     </form>
                 </div>
@@ -129,33 +141,11 @@
                     <table style="padding: 10px;background-color: #04AA6D;color: white;">
                         <tr style="font-weight: bold;">
                             <td>Current Time:</td>
-                            <td>100/100/100</td>
+                            <td id="time"></td>
                         </tr>
                     </table>
-                    <table style="margin-top: 20px;padding: 10px;">
-                        <tr>
-                            <td style="width: 20%;">Nama</td>
-                            <td>:</td>
-                            <td>Muhamad Aziz</td>
-                        </tr>
-                        <tr>
-                            <td>Tanggal Lahir</td>
-                            <td>:</td>
-                            <td>12/12/12</td>
-                        </tr>
-                        <tr>
-                            <td>Jenis Kelamin</td>
-                            <td>:</td>
-                            <td>Laki -laki</td>
-                        </tr>
-                        <tr>
-                            <td>Pesan</td>
-                            <td>:</td>
-                            <td style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Rem temporibus aperiam enim,
-                                in sequi consequuntur blanditiis quod nam eum eligendi rerum corporis mollitia repellat
-                                asperiores officia hic natus dignissimos fugiat?</td>
-                        </tr>
+                    <table style="margin-top: 20px;padding: 10px;" id="table-user">
+
                     </table>
                 </div>
             </article>
